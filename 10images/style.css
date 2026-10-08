@@ -1,0 +1,42 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+.rubik-scribble-regular 
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    background-color: #281d0b;
+}
+
+.viewer {
+position: relative; /* important: anchors the absolute-positioned children */
+height: 100vh; /* full viewport height */
+width: 100vw; /* full viewport width */
+}
+
+/* The image: covers the entire viewer */
+.viewer img {
+position: absolute;
+inset: 0; /* shorthand for top/right/bottom/left: 0 */
+width: 100%;
+height: 100%;
+object-fit: contain; /* fill without distortion; may crop */
+}
+
+/* The caption: sits at the bottom, readable over the image */
+.viewer .description {
+position: absolute;
+left: 85%;
+bottom: 25%;
+width: 400px;
+height: 200px;
+transform: translateX(-50%); /* shifts back by half its own width */
+font-size: 2rem;
+padding: 1rem 1.5rem;
+color: #1873f3;
+background: rgba(15, 1, 1, 0.719); /* translucent bar for contrast */
+border: 5px ridge rgb(213, 91, 16);
+border-width: 9px;
+border-radius: 15rem;
+}
